@@ -106,7 +106,6 @@ async function getStepsToday(auth) {
       if (steps !== lastSteps) {
         console.log(`[${new Date().toLocaleTimeString()}] 🦶 Total steps today: ${steps}`);
         const wowCmd = `/stepadd ${steps}`;
-        require('child_process').exec(`echo ${wowCmd} | clip`);
         console.log(`📋 Copied to clipboard (via clip): ${wowCmd}`);
         lastSteps = steps;
       }
